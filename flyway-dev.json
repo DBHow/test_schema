@@ -1,0 +1,32 @@
+{
+  "version": "2.0",
+  "name": "test_schema_github",
+  "id": "3a980b51-4f79-4260-ad81-712cc074029f",
+  "databaseType": "AuroraPostgreSql",
+  "schemas": [
+    "test_schema_github"
+  ],
+  "developmentDatabase": {
+    "connectionProvider": {
+      "url": "jdbc:postgresql://gh-postgresql-01.cfetz1iqyyob.us-east-1.rds.amazonaws.com:5432/flyway_test_dev",
+      "type": "UsernamePassword"
+    },
+    "displayName": "dev"
+  },
+  "development": {
+    "scriptsFolder": "./schema-model"
+  },
+  "deployment": {
+    "flywayConfFiles": [
+      "./flyway.conf"
+    ],
+    "shadowDatabase": {
+      "connectionProvider": {
+        "url": "jdbc:postgresql://gh-postgresql-01.cfetz1iqyyob.us-east-1.rds.amazonaws.com:5432/flyway_test_shadow",
+        "type": "UsernamePassword"
+      },
+      "displayName": "shadow"
+    },
+    "generateUndoScripts": true
+  }
+}
