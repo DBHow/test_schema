@@ -1,0 +1,20 @@
+function "test_schema_github"."add1(integer, integer)" {
+  text = select $1 + $2
+  returnType = integer
+  arguments = <
+    {
+      name = 
+      type = integer
+      mode = IN
+    }
+
+    {
+      name = 
+      type = integer
+      mode = IN
+    }
+
+  >
+  language = sql
+}
+

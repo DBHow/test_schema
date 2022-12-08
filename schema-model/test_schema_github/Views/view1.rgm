@@ -1,0 +1,12 @@
+view "test_schema_github"."view1" {
+  text = """-
+SELECT table1.id
+   FROM test_schema_github.table1;
+"""
+  columns = (
+    column "id" {
+      type = "integer"
+    }
+  )
+}
+
