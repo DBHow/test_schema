@@ -1,0 +1,16 @@
+function "test_schema_github"."func1(integer)" {
+  text = """-
+ select $1 + 1; 
+"""
+  returnType = integer
+  arguments = <
+    {
+      name = 
+      type = integer
+      mode = IN
+    }
+
+  >
+  language = sql
+}
+

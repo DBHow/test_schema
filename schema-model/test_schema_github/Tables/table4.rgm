@@ -1,0 +1,11 @@
+table "test_schema_github"."table4" {
+  columns = (
+    column "id" {
+      type = integer
+    }
+    column "name" {
+      type = character varying(50)
+    }
+  )
+}
+
